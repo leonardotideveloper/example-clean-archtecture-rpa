@@ -7,4 +7,4 @@ def request_adapter(controller: Callable) -> HttpResponse:
         url="https://api.cotacoes.uol.com/mixed/summary?&currencies=1,11,5&itens=1,435833,1168&fields=name,openbidvalue,askvalue,variationpercentbid,price,exchangeasset,open,pctChange,date,abbreviation&jsonp=jsonp"
     )
     response = controller(request)
-    print(response.body)
+    return response
